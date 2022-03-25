@@ -7,6 +7,7 @@ import { useContext } from 'react';
 
 
 const Cart = createContext();
+faker.seed(99);
 
 const Context = ({ children }) => {
     const products = [...Array(20)].map(() => ({
@@ -18,7 +19,7 @@ const Context = ({ children }) => {
         fastDelivery: faker.datatype.boolean(),
         ratings: faker.random.arrayElement([1, 2, 3, 4, 5]),
       }));
-      // console.log(products);
+      console.log(products);
       // console.log(children);
 
     const [state, dispatch] = useReducer(cartReducer, {

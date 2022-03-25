@@ -19,5 +19,5 @@ function App() {
 export default App;
 
 
-// 22min
+// 30min
 //https://www.youtube.com/watch?v=HptuMAUaNGk
