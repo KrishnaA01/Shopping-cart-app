@@ -9,7 +9,8 @@ const Header = () => {
 
     const {
         state: { cart },
-        dispatch
+        dispatch,
+        productDispatch,
     } = CartState()
     
   return (
@@ -24,6 +25,12 @@ const Header = () => {
                     className='m-auto'
                     style={{ width:500 }}
                     placeholder='Search a product'
+                    onChange={(e)=>{
+                        productDispatch({
+                            type: "FILTER_BY_SEARCH",
+                            payload : e.target.value,
+                        })
+                    }}
                     />
                 </Navbar.Text>
                 <Nav>
